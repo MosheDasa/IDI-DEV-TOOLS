@@ -62,6 +62,7 @@ const ProfileSection: React.FC<ProfileSectionProps> = ({
                         className="full-width"
                         size="large"
                         allowClear
+                        style={{ width: '100%' }}
                     />
                 </div>
 

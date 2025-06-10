@@ -4,16 +4,24 @@ const path = require('path');
 function createWindow() {
   const mainWindow = new BrowserWindow({
  
-    height: 1000,
-    width: 1500,
+    height: 800,
+    width: 1040,
     webPreferences: {
-      nodeIntegration: true,
-      contextIsolation: false
+      nodeIntegration: false,
+      contextIsolation: true
     },
-    autoHideMenuBar: true,
-    frame: true
+    autoHideMenuBar: false,
+    frame: true,
+    backgroundColor: '#ffffff',
+    transparent: false,
+    minimizable: true,
+    maximizable: false,
+    fullscreenable: false,
+    closable: true,
+    resizable: false,
   });
 
+  mainWindow.setTitle("IDI DEV TOOLS");
   mainWindow.setMenu(null);
   mainWindow.loadFile(path.join(app.getAppPath(), 'dist/index.html'));
   mainWindow.webContents.openDevTools({ mode: 'detach' });
