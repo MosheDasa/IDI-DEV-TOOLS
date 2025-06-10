@@ -1,0 +1,36 @@
+{
+  "name": "electron-react-app",
+  "version": "1.0.0",
+  "description": "Electron React Application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "webpack --config webpack.config.js",
+    "dev": "webpack serve --config webpack.config.js",
+    "pack": "webpack --config webpack.config.js --mode production",
+    "pack-win": "npm run build && electron-builder --win",
+    "full-start": "npm run build && npm run start"
+  },
+  "dependencies": {
+    "antd": "^5.14.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.19",
+    "@types/react": "^18.2.55",
+    "@types/react-dom": "^18.2.19",
+    "autoprefixer": "^10.4.21",
+    "css-loader": "^6.10.0",
+    "electron": "^28.2.3",
+    "html-webpack-plugin": "^5.6.0",
+    "postcss": "^8.5.4",
+    "style-loader": "^3.3.4",
+    "tailwindcss": "^4.1.8",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.3.3",
+    "webpack": "^5.90.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}
